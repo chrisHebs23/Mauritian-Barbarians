@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // root path for this project
@@ -12,6 +14,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(ROOT, "public/index.html"),
     }),
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("production"),
+      },
+    }),
+    new Dotenv(),
   ],
   module: {
     rules: [
