@@ -26,7 +26,6 @@
     "react-dom": "^17.0.1",
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.1",
     "styled-icons": "^10.29.0"
   },
   "devDependencies": {
@@ -41,11 +40,15 @@
     "dotenv-webpack": "^7.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.1.0",
+    "source-map-loader": "^2.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
-  "description": ""
+  "description": "",
+  "resolutions": {
+    "styled-components": "^5.2.1"
+  }
 }

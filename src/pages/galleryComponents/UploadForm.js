@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ProgressBarGallery from "./ProgressBarGallery";
-import * as theme from "../../config/theme";
+import * as theme from "../../themes/theme";
 
 const Form = styled.form`
-  /* margin: 30px auto 10px; */
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
 `;
 
 const Label = styled.label`
@@ -16,29 +15,32 @@ const Label = styled.label`
   height: 30px;
   border: 1px solid ${theme.primaryBlue};
   border-radius: 50%;
-  /* margin: auto; */
-  /* line-height: 30px; */
   background-color: ${theme.primaryPink};
   font-weight: bold;
   font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-self: center;
   input {
     height: 0;
     width: 0;
     opacity: 0;
   }
 
-  :hover {
+  &:hover {
     background: ${theme.primaryPink};
     color: #fff;
   }
 `;
 
 const Plus = styled.span`
-  margin: auto 0;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 `;
 
 const UploadForm = () => {

@@ -42,7 +42,7 @@ const Background1 = styled.div`
   height: 100%;
   margin: 0 auto;
   background: url(${founder1}) no-repeat 50% 5%;
-  :hover {
+  &:hover {
     background: url(${funny1}) no-repeat 50% 5%;
     background-size: contain;
   }
@@ -53,7 +53,7 @@ const Background2 = styled.div`
   height: 100%;
   margin: 0 auto;
   background: url(${founder2}) no-repeat 50% 5%;
-  :hover {
+  &:hover {
     background: url(${funny2}) no-repeat 50% 5%;
     background-size: contain;
   }
@@ -64,7 +64,7 @@ const Background3 = styled.div`
   height: 100%;
   margin: 0 auto;
   background: url(${founder3}) no-repeat 50% 5%;
-  :hover {
+  &:hover {
     background: url(${funny3}) no-repeat 50% 5%;
     background-size: contain;
   }

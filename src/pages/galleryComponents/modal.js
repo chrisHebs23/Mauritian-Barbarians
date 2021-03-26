@@ -8,6 +8,7 @@ const Backdrop = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -17,20 +18,22 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  width: auto;
-  height: auto;
 `;
 
 const Image = styled(motion.img)`
-  max-width: 80%;
-  max-height: 80%;
-  margin-top: 2%;
+  margin-top: 1%;
+  width: 60%;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
   @media (max-width: 64rem) {
-    max-width: 95%;
-    max-height: 95%;
-    margin: 20%;
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+  }
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 100%;
+    margin: 5%;
   }
 `;
 

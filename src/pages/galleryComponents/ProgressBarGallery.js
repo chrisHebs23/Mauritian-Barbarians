@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useStorage from "../../hooks/useStorage";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import * as theme from "../../config/theme";
+import * as theme from "../../themes/theme";
 
 const Progressbar = styled(motion.div)`
   height: 5px;

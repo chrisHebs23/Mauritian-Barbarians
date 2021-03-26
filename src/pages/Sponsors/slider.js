@@ -5,36 +5,52 @@ import { motion } from "framer-motion";
 import Carousel from "nuka-carousel";
 
 const Image = styled(motion.img)`
-  width: 60%;
+  width: 18rem;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
+  @media (max-width: 30rem) {
+    width: 10rem;
+  }
 `;
 
 const ImageContainer = styled.a`
-  width: fit-content;
-  height: fit-content;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 10%;
 `;
 
 const Slider = styled(Carousel)`
-  background-color: rgba(191, 191, 191, 0.1);
-  height: auto !important;
+  height: 70% !important;
   width: 100% !important;
-  margin: 0 auto;
 
   @media (max-width: 30rem) {
+    height: 50% !important;
+  }
+
+  .slider-frame {
+    height: 90% !important;
+  }
+
+  .slider-list {
+    margin: 5% 20% !important;
   }
 
   .slider-slide {
     display: flex !important;
-    justify-items: center;
+    justify-self: center;
     align-items: center;
+    width: 100% !important;
+    height: auto !important;
   }
   .slider-control-centerright,
   .slider-control-centerleft {
     display: none;
   }
   .slider-control-bottomcenter {
+    margin-top: 5%;
   }
 `;
 

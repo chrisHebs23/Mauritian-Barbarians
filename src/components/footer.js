@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import * as theme from "../config/theme";
+import * as theme from "../themes/theme";
 import { FacebookCircle } from "@styled-icons/boxicons-logos/FacebookCircle";
 import { InstagramAlt } from "@styled-icons/boxicons-logos/InstagramAlt";
 import { StyledIconBase } from "@styled-icons/styled-icon";
@@ -35,7 +35,7 @@ const IconStyleWrapper = styled.div`
     height: min-content;
     color: #fff;
 
-    :hover {
+    &:hover {
       color: ${theme.primaryPink};
       transform: rotate(50deg);
     }

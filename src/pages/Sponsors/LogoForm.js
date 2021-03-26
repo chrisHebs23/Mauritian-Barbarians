@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ProgressLogo from "./ProgressLogo";
-import * as theme from "../../config/theme";
+import * as theme from "../../themes/theme";
 
 const Form = styled.form`
   /* margin: 30px auto 10px; */
@@ -31,7 +31,7 @@ const Label = styled.label`
     opacity: 0;
   }
 
-  :hover {
+  &:hover {
     background: ${theme.primaryPink};
     color: #fff;
   }

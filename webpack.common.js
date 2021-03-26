@@ -29,6 +29,11 @@ module.exports = {
         use: "babel-loader",
       },
       {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },

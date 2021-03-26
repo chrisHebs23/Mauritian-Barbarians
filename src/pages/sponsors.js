@@ -16,15 +16,21 @@ const LayoutCover = styled.div`
   background-size: cover;
 `;
 
+const Text = styled.h4`
+  color: #fff;
+  margin: 2%;
+`;
+
 export default function Sponsors() {
   return (
     <Layout>
       <LayoutCover>
-        <Title>To Our Sponsors</Title>
-        <h4 style={{ textAlign: "center" }}>
+        <Title style={{ color: "#fff" }}>To Our Sponsors</Title>
+        <Text style={{ textAlign: "center" }}>
           Thank you for supporting the <em>Dream</em>! We look forward to
           working with you again in the future!
-        </h4>
+        </Text>
+
         <SimpleSlider />
       </LayoutCover>
     </Layout>

@@ -2,7 +2,6 @@ import React from "react";
 import "aos/dist/aos.css";
 import styled from "styled-components";
 import { Medal } from "@styled-icons/fa-solid/Medal";
-
 import { InfoLayout, InfoTitle, InfoWrapper } from "./who";
 
 const Medals = styled(Medal)`

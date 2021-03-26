@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Button from "../config/Button";
+import Button from "../themes/Button";
 import Who from "./information/who";
 import Goal from "./information/goal";
 import SupportUs from "./information/supportUs";
@@ -57,7 +57,7 @@ const ButtonContainer = styled.div`
 const Span = styled.a`
   color: white;
   text-decoration: none;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;

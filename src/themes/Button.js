@@ -11,7 +11,7 @@ const ButtonStyle = styled.button`
   margin-bottom: auto;
   color: #fff;
   text-align: center;
-  :hover {
+  &:hover {
     background-color: ${theme.primaryBlue};
   }
 `;
