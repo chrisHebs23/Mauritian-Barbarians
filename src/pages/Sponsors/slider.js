@@ -3,54 +3,59 @@ import useFirestore from "../../hooks/useFirestore";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Carousel from "nuka-carousel";
+import * as theme from "../../themes/theme";
 
 const Image = styled(motion.img)`
   width: 18rem;
   height: auto;
   margin: auto;
+
+  @media (max-width: 42rem) {
+    width: 13rem;
+  }
   @media (max-width: 30rem) {
-    width: 10rem;
+    width: 12rem;
   }
 `;
 
 const ImageContainer = styled.a`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  margin-bottom: 10%;
+  width: auto;
+  height: auto;
 `;
 
 const Slider = styled(Carousel)`
-  height: 70% !important;
+  height: 80% !important;
   width: 100% !important;
 
-  @media (max-width: 30rem) {
+  @media (max-width: 42rem) {
     height: 50% !important;
   }
 
   .slider-frame {
-    height: 90% !important;
+    height: 100% !important;
   }
 
   .slider-list {
-    margin: 5% 20% !important;
+    height: 50% !important;
+    width: 100% !important;
+    margin: auto;
   }
 
   .slider-slide {
-    display: flex !important;
-    justify-self: center;
-    align-items: center;
-    width: 100% !important;
-    height: auto !important;
+    display: flex !important; // make us of Flexbox
+    align-items: center; // does vertically center the desired content
+    justify-content: center; // horizontally centers single line items
+    text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
   }
+
   .slider-control-centerright,
   .slider-control-centerleft {
     display: none;
   }
   .slider-control-bottomcenter {
-    margin-top: 5%;
+  }
+  button {
+    fill: ${theme.primaryPink} !important;
   }
 `;
 
@@ -58,7 +63,7 @@ const SimpleSlider = () => {
   const { docs } = useFirestore("sponsors");
 
   return (
-    <Slider autoplay>
+    <Slider>
       {docs.map((doc) => (
         <ImageContainer href={doc.website} target="_blank" key={doc.id}>
           <Image src={doc.url} />

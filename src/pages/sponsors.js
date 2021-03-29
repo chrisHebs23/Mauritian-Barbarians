@@ -8,12 +8,14 @@ const Layout = styled.div`
   height: 100vh;
   background: url(${SponsorImage}) no-repeat center center;
   background-size: cover;
+  position: relative;
 `;
 
 const LayoutCover = styled.div`
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   background-size: cover;
+  padding-bottom: 5%;
 `;
 
 const Text = styled.h4`

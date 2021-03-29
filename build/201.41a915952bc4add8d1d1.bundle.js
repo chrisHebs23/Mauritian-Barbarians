@@ -1,6 +1,0 @@
-(self.webpackChunkreact_webpack_boilerplate=self.webpackChunkreact_webpack_boilerplate||[]).push([[201],{5201:(e,t,a)=>{"use strict";a.r(t),a.d(t,{default:()=>d});var r=a(9526),l=a(4219),n=a(1225),c=a(6523),u=a(8759),o=a(1070),s=a(5092),i=a(565),m=a(2326);function d(){const e=(0,r.useRef)(),t=(0,r.useRef)(),{login:a}=(0,o.a)(),[d,p]=(0,r.useState)(""),[E,w]=(0,r.useState)(!1),b=(0,s.k6)(),Z=m.ZP.div`
-    height: 100vh;
-    margin: 5% auto;
-    width: 75%;
-    text-align: center;
-  `;return r.createElement(Z,null,r.createElement(l.Z,null,r.createElement(l.Z.Body,null,r.createElement("h2",{className:"text-center mb-4"},"Log in"),d&&r.createElement(n.Z,{variant:"danger"},d),r.createElement(c.Z,{onSubmit:async function(r){r.preventDefault();try{p(""),w(!0),await a(e.current.value,t.current.value),b.push("/upload")}catch{p("Failed to log in")}w(!1)}},r.createElement(c.Z.Group,{id:"email"},r.createElement(c.Z.Label,null,"Email"),r.createElement(c.Z.Control,{type:"email",ref:e,required:!0})),r.createElement(c.Z.Group,{id:"password"},r.createElement(c.Z.Label,null,"Password"),r.createElement(c.Z.Control,{type:"password",ref:t,required:!0})),r.createElement(u.Z,{disabled:E,className:"w-100",type:"submit"},"Log In")),r.createElement("div",{className:"w-100 text-center mt-3"},r.createElement(i.rU,{to:"/forgot-password"},"Forgot Password?")))))}}}]);

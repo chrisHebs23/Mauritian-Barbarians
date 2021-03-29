@@ -4,11 +4,15 @@ import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import * as theme from "../themes/theme";
 
 const NavbarStyle = styled(Navbar)`
   /* border-bottom: 0.5px solid grey; */
   box-shadow: 0 8px 4px -9px rgba(0, 0, 0, 0.3);
   background-color: #fff;
+  @media (max-width: 48rem) {
+    margin-left: -3.5rem;
+  }
 `;
 
 const Brand = styled(Navbar.Brand)`
@@ -42,7 +46,10 @@ const NavLinkStyle = styled(NavLink)`
   color: #000;
   text-decoration: none;
   margin: 0 auto;
-  /* text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8); */
+  &:hover {
+    color: ${theme.primaryPink};
+    text-decoration: none;
+  }
 `;
 
 export default function Navigator(props) {

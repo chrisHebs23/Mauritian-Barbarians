@@ -20,10 +20,12 @@ import BackgroundSlider from "react-background-slider";
 import "./home.css";
 
 const Layout = styled.div`
-  margin: 10%;
   height: 100%;
   text-align: center;
   margin: 0 auto;
+  /* @media (max-width: 48rem) {
+    height: 100%;
+  } */
 `;
 
 const CoverBack = styled.div`

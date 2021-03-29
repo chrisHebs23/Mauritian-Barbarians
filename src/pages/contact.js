@@ -12,6 +12,9 @@ const Layout = styled.div`
   background: none;
   background: url(${Logo}) no-repeat center center;
   background-size: 25rem;
+  @media (max-width: 48rem) {
+    height: 100%;
+  }
 `;
 
 const LayerCover = styled.div`
@@ -74,7 +77,7 @@ const Textarea = styled.textarea`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 1px;
   @media (max-width: 64rem) {
     width: 85%;
-    margin: 4% auto;
+    margin: 2% auto;
   }
 `;
 const Break = styled.div`
