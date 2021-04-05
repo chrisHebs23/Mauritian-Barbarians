@@ -24,19 +24,18 @@ const ImageContainer = styled.a`
 `;
 
 const Slider = styled(Carousel)`
-  height: 80% !important;
+  height: 35vh !important;
   width: 100% !important;
 
-  @media (max-width: 42rem) {
-    height: 50% !important;
+  @media (max-width: 30rem) {
+    height: 25vh !important;
   }
-
   .slider-frame {
     height: 100% !important;
   }
 
   .slider-list {
-    height: 50% !important;
+    height: 100% !important;
     width: 100% !important;
     margin: auto;
   }
@@ -52,8 +51,7 @@ const Slider = styled(Carousel)`
   .slider-control-centerleft {
     display: none;
   }
-  .slider-control-bottomcenter {
-  }
+
   button {
     fill: ${theme.primaryPink} !important;
   }
@@ -63,7 +61,7 @@ const SimpleSlider = () => {
   const { docs } = useFirestore("sponsors");
 
   return (
-    <Slider>
+    <Slider autoplay autoplayInterval={1000} pauseOnHover wrapAround>
       {docs.map((doc) => (
         <ImageContainer href={doc.website} target="_blank" key={doc.id}>
           <Image src={doc.url} />

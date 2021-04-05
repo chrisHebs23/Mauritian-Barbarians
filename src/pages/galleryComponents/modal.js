@@ -22,7 +22,8 @@ const ImageContainer = styled.div`
 
 const Image = styled(motion.img)`
   margin-top: 1%;
-  width: 60%;
+  width: auto;
+  height: 90vh;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
   @media (max-width: 64rem) {
@@ -64,12 +65,6 @@ export default function Modal({ setSelectedImg, selectedImg, images }) {
       setSelectedImg(null);
     }
   };
-
-  // function handleLeftClick() {
-  //   return images.indexOf(selectedImg);
-  // }
-
-  // function handleLeftClick() {}
 
   return (
     <Backdrop

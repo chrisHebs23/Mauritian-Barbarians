@@ -8,7 +8,9 @@ import { StyledIconBase } from "@styled-icons/styled-icon";
 const FooterStyle = styled.footer`
   background-color: ${theme.primaryBlue};
   width: 100%;
-  height: 3.2rem;
+  height: 4rem;
+  position: absolute;
+  bottom: auto;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   flex-direction: row;
@@ -21,19 +23,17 @@ const IconStyleWrapper = styled.div`
   width: 100%;
   grid-column: 1/2;
   display: flex;
-  height: min-content;
   justify-content: center;
 
   @media (max-width: 30rem) {
     width: 100%;
-    margin-left: 5%;
   }
 
   ${StyledIconBase} {
-    margin: auto 0.5rem;
-    width: 3rem;
-    height: min-content;
+    width: 2.5rem;
+    height: 2.5rem;
     color: #fff;
+    margin-right: 2%;
 
     &:hover {
       color: ${theme.primaryPink};

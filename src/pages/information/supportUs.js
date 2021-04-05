@@ -31,22 +31,17 @@ export default function SupportUs() {
         </div>
 
         <InfoText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus
-          mauris ultrices eros in cursus turpis massa. Ipsum suspendisse
-          ultrices gravida dictum. At tellus at urna condimentum mattis. Urna
-          nec tincidunt praesent semper feugiat nibh sed pulvinar proin.
-          Tincidunt lobortis feugiat vivamus at augue. Venenatis cras sed felis
-          eget velit aliquet sagittis. Amet porttitor eget dolor morbi non. Sed
-          vulputate odio ut enim blandit volutpat maecenas volutpat blandit. In
-          metus vulputate eu scelerisque felis imperdiet proin fermentum leo.
-          Rhoncus dolor purus non enim praesent. Aliquam ultrices sagittis orci
-          a. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Pharetra
-          et ultrices neque ornare aenean euismod. Elementum eu facilisis sed
-          odio morbi quis commodo odio. Enim diam vulputate ut pharetra sit amet
-          aliquam. Volutpat odio facilisis mauris sit amet massa. Ridiculus mus
-          mauris vitae ultricies leo integer malesuada. Massa massa ultricies mi
-          quis hendrerit dolor. Nibh nisl condimentum id venenatis.
+          Taking a team of twelve players and three support staff from Mauritius
+          to Dubai every year is not an inexpensive undertaking. There are costs
+          involved in preparing the team for the very highest level of amateur
+          competition, return flights, accommodation, transport, meals, playing
+          kit, basic medical supplies and insurance. In the past we have relied
+          on corporate sponsorship and donations, coupled with fundraising
+          initiatives. The advent of Covid-19 has changed the landscape and we
+          are having to look at alternative fundraising mechanisms. If you have
+          a couple of dollars to spare, please hit the button for our
+          fundraising page. Our thanks for helping us to put deserving players
+          onto the field!
         </InfoText>
       </InfoWrapper>
       <Button>

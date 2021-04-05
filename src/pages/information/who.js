@@ -21,6 +21,7 @@ export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: left;
   @media (max-width: 48rem) {
     display: inline;
   }
@@ -49,22 +50,20 @@ export default function Who() {
         </div>
 
         <InfoText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus
-          mauris ultrices eros in cursus turpis massa. Ipsum suspendisse
-          ultrices gravida dictum. At tellus at urna condimentum mattis. Urna
-          nec tincidunt praesent semper feugiat nibh sed pulvinar proin.
-          Tincidunt lobortis feugiat vivamus at augue. Venenatis cras sed felis
-          eget velit aliquet sagittis. Amet porttitor eget dolor morbi non. Sed
-          vulputate odio ut enim blandit volutpat maecenas volutpat blandit. In
-          metus vulputate eu scelerisque felis imperdiet proin fermentum leo.
-          Rhoncus dolor purus non enim praesent. Aliquam ultrices sagittis orci
-          a. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Pharetra
-          et ultrices neque ornare aenean euismod. Elementum eu facilisis sed
-          odio morbi quis commodo odio. Enim diam vulputate ut pharetra sit amet
-          aliquam. Volutpat odio facilisis mauris sit amet massa. Ridiculus mus
-          mauris vitae ultricies leo integer malesuada. Massa massa ultricies mi
-          quis hendrerit dolor. Nibh nisl condimentum id venenatis.
+          The Mauritian Barbarians is a not-for-profit organisation that was
+          established to enable young Mauritian rugby players, both men and
+          women from differing socio-economic groups to participate in top end
+          international rugby competitions. Rugby teaches discipline, unity and
+          teamwork, combined with demanding physical activity. It is a sport
+          that attempts to develop players who are strong in body, mind and
+          character.
+          <br></br>
+          <br></br>
+          The concept of the Mauritian Barbarians originated in 2014 when it
+          became apparent that some of the emerging rugby talent on the island
+          of Mauritius would benefit from exposure to more than just club rugby
+          against the same opponents and limited regional international
+          competition.
         </InfoText>
       </InfoWrapper>
     </InfoLayout>

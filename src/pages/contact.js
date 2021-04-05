@@ -3,18 +3,16 @@ import emailjs from "emailjs-com";
 import { Title } from "./gallery";
 import styled, { keyframes } from "styled-components";
 import Button from "../themes/Button";
-import Logo from "../../public/logo.png";
 
 const Layout = styled.div`
-  height: 100vh;
   margin: 0;
   text-align: center;
   background: none;
-  background: url(${Logo}) no-repeat center center;
   background-size: 25rem;
-  @media (max-width: 48rem) {
-    height: 100%;
-  }
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: -40px; /* Put negative height of the footer here */
+  padding-bottom: 40px;
 `;
 
 const LayerCover = styled.div`
@@ -38,10 +36,12 @@ const LayerCover = styled.div`
   );
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100%;
+  height: 100vh;
+  padding-bottom: 5%;
 `;
 
 const Form = styled.form`
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -49,6 +49,7 @@ const Form = styled.form`
   justify-content: center;
   width: 100%;
   height: auto;
+
   @media (max-width: 30rem) {
     flex-direction: column;
     flex-wrap: none;
@@ -76,7 +77,7 @@ const Textarea = styled.textarea`
   border: 1px solid rgba(191, 191, 191, 0.2);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 1px;
   @media (max-width: 64rem) {
-    width: 85%;
+    width: 90%;
     margin: 2% auto;
   }
 `;
@@ -103,7 +104,7 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert(result.text);
         },
         (error) => {
           console.log(error.text);
@@ -118,8 +119,9 @@ export default function Contact() {
       <LayerCover>
         <Title>Contact Us</Title>
         <Message>
-          Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast
-          yardarm.
+          If you are keen to help the Mauritian Barbarians, or if you are a team
+          scheduled to play in the Dubai 7’s, please contact us by filling out
+          the form below:s
         </Message>
         <Form className="contact-form" onSubmit={sendEmail}>
           <Input type="text" name="name" placeholder="Name" />

@@ -32,7 +32,7 @@ const Founder = styled.div`
   height: 100%;
   border-radius: 2%;
   padding: 2%;
-  margin: 1% 1%;
+  margin: 2% 2%;
   border: 1px solid rgba(191, 191, 191, 0.2);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: grid;
@@ -75,6 +75,8 @@ const Background3 = styled.div`
 
 const FoundersText = styled.div`
   text-align: center;
+  width: 100%;
+  height: 100%;
   margin: 2%;
 `;
 

@@ -11,6 +11,9 @@ export const Title = styled.h1`
   font-size: 4rem;
   text-align: center;
   margin: 0;
+  @media (max-width: 30rem) {
+    font-size: 3rem;
+  }
 `;
 
 const Background = styled.div`

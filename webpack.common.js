@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 // root path for this project
 const ROOT = __dirname;
@@ -20,6 +21,7 @@ module.exports = {
       },
     }),
     new Dotenv(),
+    new FaviconsWebpackPlugin("./public/logo.png"),
   ],
   module: {
     rules: [

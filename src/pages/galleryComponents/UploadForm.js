@@ -8,6 +8,7 @@ const Form = styled.form`
   display: flex;
   justify-content: center;
   align-self: center;
+  width: 100%;
 `;
 
 const Label = styled.label`

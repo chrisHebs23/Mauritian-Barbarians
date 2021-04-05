@@ -10,9 +10,6 @@ const NavbarStyle = styled(Navbar)`
   /* border-bottom: 0.5px solid grey; */
   box-shadow: 0 8px 4px -9px rgba(0, 0, 0, 0.3);
   background-color: #fff;
-  @media (max-width: 48rem) {
-    margin-left: -3.5rem;
-  }
 `;
 
 const Brand = styled(Navbar.Brand)`
@@ -23,6 +20,9 @@ const Brand = styled(Navbar.Brand)`
   background-repeat: no-repeat;
   background-image: url(${logo});
   margin: 0;
+  @media (max-width: 48rem) {
+    margin-left: -3.5rem;
+  }
 `;
 
 const BrandText = styled.h3`

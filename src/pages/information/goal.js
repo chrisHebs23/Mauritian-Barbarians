@@ -15,6 +15,7 @@ const Medals = styled(Medal)`
 const InfoWrapperGoal = styled.div`
   display: flex;
   flex-direction: row-reverse;
+  text-align: left;
   @media (max-width: 48rem) {
     display: inline;
   }
@@ -34,22 +35,18 @@ export default function Goal() {
           <Medals />
         </div>
         <InfoTextGoal>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus
-          mauris ultrices eros in cursus turpis massa. Ipsum suspendisse
-          ultrices gravida dictum. At tellus at urna condimentum mattis. Urna
-          nec tincidunt praesent semper feugiat nibh sed pulvinar proin.
-          Tincidunt lobortis feugiat vivamus at augue. Venenatis cras sed felis
-          eget velit aliquet sagittis. Amet porttitor eget dolor morbi non. Sed
-          vulputate odio ut enim blandit volutpat maecenas volutpat blandit. In
-          metus vulputate eu scelerisque felis imperdiet proin fermentum leo.
-          Rhoncus dolor purus non enim praesent. Aliquam ultrices sagittis orci
-          a. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Pharetra
-          et ultrices neque ornare aenean euismod. Elementum eu facilisis sed
-          odio morbi quis commodo odio. Enim diam vulputate ut pharetra sit amet
-          aliquam. Volutpat odio facilisis mauris sit amet massa. Ridiculus mus
-          mauris vitae ultricies leo integer malesuada. Massa massa ultricies mi
-          quis hendrerit dolor. Nibh nisl condimentum id venenatis.
+          The focus of the Mauritian Barbarians is to develop talent and improve
+          skills levels with a conscious bias towards including players from
+          vulnerable communities and communities not historically associated
+          with rugby.
+          <br></br>
+          <br></br>
+          Our ethos is not one of winning at all costs, the primary goal of the
+          Mauritian Barbarians is the development of rugby and rugby players in
+          Mauritius, exposing them to international competitions and the broader
+          world view while creating an inclusive environment that enables the
+          selection of raw and developing talent that may one day aspire to
+          greater things.
         </InfoTextGoal>
       </InfoWrapperGoal>
     </InfoLayout>
