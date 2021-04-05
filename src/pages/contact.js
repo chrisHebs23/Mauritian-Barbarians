@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import { Title } from "./gallery";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Button from "../themes/Button";
 
 const Layout = styled.div`

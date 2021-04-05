@@ -3,13 +3,17 @@ const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-
+const TerserPlugin = require("terser-webpack-plugin");
 // root path for this project
 const ROOT = __dirname;
 
 module.exports = {
   entry: {
     main: "./src/index.js",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   plugins: [
     new HtmlWebpackPlugin({

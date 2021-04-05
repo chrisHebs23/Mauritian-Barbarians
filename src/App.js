@@ -31,7 +31,7 @@ function App() {
 
           <Switch>
             <Suspense
-              fallback={<span style={{ color: "White" }}>Loading...</span>}
+              fallback={<div style={{ color: "White" }}>Loading...</div>}
             >
               <Route exact path="/" component={HomePage} />
 

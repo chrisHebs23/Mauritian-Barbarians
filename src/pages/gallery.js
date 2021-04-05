@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import styled from "styled-components";
-import ImageLayout from "./galleryComponents/imageLayout";
 import Modal from "./galleryComponents/modal";
 import Joy from "../../public/images/Joy.jpg";
 import useFirestore from "../hooks/useFirestore";
+
+const ImageLayout = lazy(() => import("./galleryComponents/imageLayout"));
 
 export const Title = styled.h1`
   margin: auto 0;
@@ -52,14 +53,16 @@ export default function GalleryPage() {
         </Cover>
       </Background>
 
-      <ImageLayout setSelectedImg={setSelectedImg} />
-      {selectedImg && (
-        <Modal
-          selectedImg={selectedImg}
-          setSelectedImg={setSelectedImg}
-          images={docs}
-        />
-      )}
+      <Suspense fallback={<div style={{ color: "White" }}>Loading...</div>}>
+        <ImageLayout setSelectedImg={setSelectedImg} />
+        {selectedImg && (
+          <Modal
+            selectedImg={selectedImg}
+            setSelectedImg={setSelectedImg}
+            images={docs}
+          />
+        )}
+      </Suspense>
     </div>
   );
 }

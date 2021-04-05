@@ -23,6 +23,7 @@ export const InfoWrapper = styled.div`
   align-items: center;
   text-align: left;
   @media (max-width: 48rem) {
+    text-align: center;
     display: inline;
   }
 `;

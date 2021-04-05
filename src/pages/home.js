@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import styled from "styled-components";
 import Button from "../themes/Button";
 import Who from "./information/who";
@@ -6,9 +6,8 @@ import Goal from "./information/goal";
 import SupportUs from "./information/supportUs";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import useFirestore from "../hooks/useFirestore";
-import BackgroundSlider from "react-background-slider";
-import "./home.css";
+
+const Background = lazy(() => import("./background"));
 
 const Layout = styled.div`
   height: 100%;
@@ -54,8 +53,6 @@ const Span = styled.a`
 `;
 
 export default function Home() {
-  const { docs } = useFirestore("background");
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -63,11 +60,10 @@ export default function Home() {
   return (
     <Layout>
       <CoverBack>
-        <BackgroundSlider
-          images={docs.map((doc) => doc.url)}
-          duration={3}
-          transition={2}
-        ></BackgroundSlider>
+        <Suspense fallback={<p>Loading Background Images...</p>}>
+          <Background />
+        </Suspense>
+
         <TitleContainer>
           <Title>Mauritian Barbarians</Title>
           <ButtonContainer>

@@ -60,7 +60,12 @@ export default function Footer() {
   return (
     <FooterStyle>
       <IconStyleWrapper>
-        <FacebookCircle />
+        <a href="https://www.facebook.com/MauritianBarbarians" target="_blank">
+          <FacebookCircle />
+        </a>
+        <a href="https://www.facebook.com/MauritianBarbarians" target="_blank">
+          <InstagramAlt />
+        </a>
         <InstagramAlt />
       </IconStyleWrapper>
       <Year>© {getYear()} Mauritian Barbarians</Year>

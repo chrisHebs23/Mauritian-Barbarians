@@ -3,7 +3,7 @@ import LogoForm from "./Sponsors/LogoForm";
 import LogoDisplay from "./Sponsors/logoDisplay";
 import { Title } from "./gallery";
 import { useAuth } from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const ButtonContainer = styled.div`

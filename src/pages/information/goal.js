@@ -18,6 +18,7 @@ const InfoWrapperGoal = styled.div`
   text-align: left;
   @media (max-width: 48rem) {
     display: inline;
+    text-align: center;
   }
 `;
 
