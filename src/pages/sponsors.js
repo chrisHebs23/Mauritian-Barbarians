@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { lazy, Suspense } from "react";
+import styled, { keyframes } from "styled-components";
 import { Title } from "./gallery";
-import SimpleSlider from "./Sponsors/slider";
 import SponsorImage from "./Sponsors/sponsorImage.jpg";
 import Button from "../themes/Button";
+
+const SimpleSlider = lazy(() => import("./Sponsors/slider"));
 
 const Layout = styled.div`
   height: 100vh;
@@ -34,6 +35,7 @@ const Span = styled.a`
     text-decoration: none;
   }
 `;
+
 export default function Sponsors() {
   return (
     <Layout>
@@ -43,7 +45,9 @@ export default function Sponsors() {
           Thank you for supporting the <em>Dream</em>! We look forward to
           working with you again in the future!
         </Text>
+
         <SimpleSlider />
+
         <Text style={{ textAlign: "center" }}>
           “Keen to become part of the <em>Dream</em>! Help by hitting that
           sponsor's button below!

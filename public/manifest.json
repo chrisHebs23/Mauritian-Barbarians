@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Mauritian Barbarians",
+  "short_name": "MurBarb",
+  "start_url": "https://mb-website-d5f6f.web.app/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#df54ad",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-36x36.png",
+      "type": "image/png",
+      "sizes": "36x36"
+    },
+    {
+      "src": "/assets/apple-touch-icon-57x57.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "/assets/favicon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ]
+}

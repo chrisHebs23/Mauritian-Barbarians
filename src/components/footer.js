@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import * as theme from "../themes/theme";
+import * as theme from "../themes/colors";
 import { FacebookCircle } from "@styled-icons/boxicons-logos/FacebookCircle";
 import { InstagramAlt } from "@styled-icons/boxicons-logos/InstagramAlt";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 
 const FooterStyle = styled.footer`
-  background-color: ${theme.primaryBlue};
+  background-color: ${theme.PrimaryBlue};
   width: 100%;
   height: 4rem;
   position: absolute;
@@ -36,7 +36,7 @@ const IconStyleWrapper = styled.div`
     margin-right: 2%;
 
     &:hover {
-      color: ${theme.primaryPink};
+      color: ${theme.PrimaryPink};
       transform: rotate(50deg);
     }
   }
@@ -66,7 +66,6 @@ export default function Footer() {
         <a href="https://www.facebook.com/MauritianBarbarians" target="_blank">
           <InstagramAlt />
         </a>
-        <InstagramAlt />
       </IconStyleWrapper>
       <Year>© {getYear()} Mauritian Barbarians</Year>
     </FooterStyle>

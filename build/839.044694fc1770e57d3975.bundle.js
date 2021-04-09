@@ -1,4 +1,14 @@
-(self.webpackChunkreact_webpack_boilerplate=self.webpackChunkreact_webpack_boilerplate||[]).push([[839],{9839:(e,i,t)=>{"use strict";t.r(i),t.d(i,{default:()=>n});var a=t(9526),h=t(1296),l=t(2326),m=t(8253);const r=l.ZP.ul`
+(self.webpackChunkreact_webpack_boilerplate=self.webpackChunkreact_webpack_boilerplate||[]).push([[839],{9839:(e,t,i)=>{"use strict";i.r(t),i.d(t,{default:()=>n});var a=i(9526),l=i(1296),r=i(2326),h=i(8253),c=i(6083);r.F4`
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #fff;
+  }
+`;const m=r.ZP.ul`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -21,7 +31,7 @@
       min-width: 0;
     }
   }
-`,d=(0,l.ZP)(m.E.li)`
+`,o=(0,r.ZP)(h.E.li)`
   height: 40vh;
   flex-grow: 1;
   margin: 1%;
@@ -36,7 +46,7 @@
       height: 80vh;
     }
   }
-`,c=(0,l.ZP)(m.E.img)`
+`,d=(0,r.ZP)(h.E.img)`
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
@@ -50,4 +60,4 @@
       overflow: hide;
     }
   }
-`,n=({setSelectedImg:e})=>{const{docs:i}=(0,h.Z)("images");return a.createElement(r,null,i&&i.map((i=>a.createElement(d,{key:i.id,onClick:()=>e(i.url)},a.createElement(c,{src:i.url})))))}}}]);
+`,n=({setSelectedImg:e})=>{const{docs:t}=(0,l.Z)("images");return a.createElement(m,null,t&&t.map((t=>a.createElement(o,{key:t.id,onClick:()=>e(t.url)},a.createElement(c.ZP,null,a.createElement(d,{src:t.url,alt:"gallery Images"}))))))}}}]);

@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import * as theme from "./theme";
 
 const ButtonStyle = styled.button`
-  background-color: ${theme.primaryPink};
+  background-color: #df54ad;
   width: auto;
   border: none;
   justify-self: center;
@@ -12,7 +11,8 @@ const ButtonStyle = styled.button`
   color: #fff;
   text-align: center;
   &:hover {
-    background-color: ${theme.primaryBlue};
+    background-color: #1a1e83;
+    color: #fff;
   }
 `;
 

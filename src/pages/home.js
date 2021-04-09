@@ -1,13 +1,14 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import styled from "styled-components";
 import Button from "../themes/Button";
-import Who from "./information/who";
-import Goal from "./information/goal";
-import SupportUs from "./information/supportUs";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import * as color from "../themes/colors";
 
 const Background = lazy(() => import("./background"));
+const Who = lazy(() => import("./information/who"));
+const Goal = lazy(() => import("./information/goal"));
+const SupportUs = lazy(() => import("./information/supportUs"));
 
 const Layout = styled.div`
   height: 100%;
@@ -19,7 +20,7 @@ const Layout = styled.div`
 const CoverBack = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-items: center;
   align-content: center;
@@ -30,6 +31,8 @@ const Title = styled.h1`
   margin: auto 0;
   color: white;
   font-size: 4rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: ${color.PrimaryPink};
 `;
 
 const TitleContainer = styled.div`
@@ -49,6 +52,7 @@ const Span = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: none;
+    color: #fff;
   }
 `;
 
@@ -60,7 +64,7 @@ export default function Home() {
   return (
     <Layout>
       <CoverBack>
-        <Suspense fallback={<p>Loading Background Images...</p>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <Background />
         </Suspense>
 
@@ -74,15 +78,17 @@ export default function Home() {
             </Button>
           </ButtonContainer>
         </TitleContainer>
-        <div data-aos="fade-down">
-          <Who />
-        </div>
-        <div data-aos="fade-down">
-          <Goal />
-        </div>
-        <div data-aos="fade-down">
-          <SupportUs />
-        </div>
+        <Suspense fallback={<p>Loading...</p>}>
+          <div data-aos="fade-down">
+            <Who />
+          </div>
+          <div data-aos="fade-down">
+            <Goal />
+          </div>
+          <div data-aos="fade-down">
+            <SupportUs />
+          </div>
+        </Suspense>
       </CoverBack>
     </Layout>
   );

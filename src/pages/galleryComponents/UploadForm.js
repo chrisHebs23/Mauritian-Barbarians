@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ProgressBarGallery from "./ProgressBarGallery";
-import * as theme from "../../themes/theme";
+import * as theme from "../../themes/colors";
 
 const Form = styled.form`
   text-align: center;
@@ -14,9 +14,9 @@ const Form = styled.form`
 const Label = styled.label`
   width: 30px;
   height: 30px;
-  border: 1px solid ${theme.primaryBlue};
+  border: 1px solid ${theme.PrimaryBlue};
   border-radius: 50%;
-  background-color: ${theme.primaryPink};
+  background-color: ${theme.PrimaryPink};
   font-weight: bold;
   font-size: 24px;
   display: flex;
@@ -32,7 +32,7 @@ const Label = styled.label`
   }
 
   &:hover {
-    background: ${theme.primaryPink};
+    background: ${theme.PrimaryPink};
     color: #fff;
   }
 `;

@@ -1,11 +1,10 @@
 import React, { lazy, Suspense } from "react";
-import Footer from "./components/footer";
 import styled from "styled-components";
-import Navigator from "./components/nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from "./PrivateRoute";
 
+const Navigator = lazy(() => import("./components/nav"));
 const HomePage = lazy(() => import("./pages/home"));
 const GalleryPage = lazy(() => import("./pages/gallery"));
 const SponsorsPage = lazy(() => import("./pages/sponsors"));
@@ -15,6 +14,7 @@ const UploadPage = lazy(() => import("./pages/upload"));
 const LogoPage = lazy(() => import("./pages/logo"));
 const LoginPage = lazy(() => import("./pages/login"));
 const ForgotPasswordPage = lazy(() => import("./pages/forgotpassword"));
+const Footer = lazy(() => import("./components/footer"));
 
 const Wrapper = styled.div`
   width: 100%;
@@ -27,7 +27,9 @@ function App() {
     <Wrapper>
       <Router>
         <AuthProvider>
-          <Navigator />
+          <Suspense fallback={<div style={{ color: "White" }}>Loading...</div>}>
+            <Navigator />
+          </Suspense>
 
           <Switch>
             <Suspense
@@ -55,7 +57,9 @@ function App() {
               />
             </Suspense>
           </Switch>
-          <Footer />
+          <Suspense fallback={<div style={{ color: "White" }}>Loading...</div>}>
+            <Footer />
+          </Suspense>
         </AuthProvider>
       </Router>
     </Wrapper>

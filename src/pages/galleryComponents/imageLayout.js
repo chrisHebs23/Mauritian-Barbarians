@@ -1,7 +1,20 @@
 import React from "react";
 import useFirestore from "../../hooks/useFirestore";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
+import LazyLoad from "react-lazyload";
+
+const loadingAnimation = keyframes`
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #fff;
+  }
+`;
 
 const ImageGrid = styled.ul`
   display: flex;
@@ -69,7 +82,9 @@ const ImageLayout = ({ setSelectedImg }) => {
       {docs &&
         docs.map((doc) => (
           <ImageWrap key={doc.id} onClick={() => setSelectedImg(doc.url)}>
-            <Image src={doc.url} />
+            <LazyLoad>
+              <Image src={doc.url} alt="gallery Images" />
+            </LazyLoad>
           </ImageWrap>
         ))}
     </ImageGrid>

@@ -13,7 +13,7 @@ const Button = styled.button`
   width: 10rem;
   margin: 5%;
   border: none;
-  background-color: ${theme.primaryPink};
+  background-color: ${theme.PrimaryPink};
   color: #fff;
   text-align: center;
 `;

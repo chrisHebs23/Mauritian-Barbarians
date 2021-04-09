@@ -1,12 +1,4 @@
-import React from "react";
-import useFirestore from "../../hooks/useFirestore";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Carousel from "nuka-carousel";
-import * as theme from "../../themes/colors";
-import LazyLoad from "react-lazyload";
-
-const Image = styled(motion.img)`
+(self.webpackChunkreact_webpack_boilerplate=self.webpackChunkreact_webpack_boilerplate||[]).push([[502],{3502:(e,t,a)=>{"use strict";a.r(t),a.d(t,{default:()=>p});var i=a(9526),r=a(1296),n=a(2326),l=a(8253),o=a(2416),s=a(2268),h=a(6083);const m=(0,n.ZP)(l.E.img)`
   width: 18rem;
   height: auto;
   margin: auto;
@@ -17,14 +9,10 @@ const Image = styled(motion.img)`
   @media (max-width: 30rem) {
     width: 12rem;
   }
-`;
-
-const ImageContainer = styled.a`
+`,d=n.ZP.a`
   width: auto;
   height: auto;
-`;
-
-const Slider = styled(Carousel)`
+`,c=(0,n.ZP)(o.ZP)`
   height: 35vh !important;
   width: 100% !important;
 
@@ -54,24 +42,6 @@ const Slider = styled(Carousel)`
   }
 
   button {
-    fill: ${theme.PrimaryPink} !important;
+    fill: ${s.eo} !important;
   }
-`;
-
-const SimpleSlider = () => {
-  const { docs } = useFirestore("sponsors");
-
-  return (
-    <Slider autoplay autoplayInterval={1000} pauseOnHover wrapAround>
-      {docs.map((doc) => (
-        <ImageContainer href={doc.website} target="_blank" key={doc.id}>
-          <LazyLoad>
-            <Image src={doc.url} />
-          </LazyLoad>
-        </ImageContainer>
-      ))}
-    </Slider>
-  );
-};
-
-export default SimpleSlider;
+`,p=()=>{const{docs:e}=(0,r.Z)("sponsors");return i.createElement(c,{autoplay:!0,autoplayInterval:1e3,pauseOnHover:!0,wrapAround:!0},e.map((e=>i.createElement(d,{href:e.website,target:"_blank",key:e.id},i.createElement(h.ZP,null,i.createElement(m,{src:e.url}))))))}},2268:(e,t,a)=>{"use strict";a.d(t,{Zv:()=>i,eo:()=>r,qR:()=>n});const i="#1a1e83",r="#df54ad",n="#f018a2"}}]);

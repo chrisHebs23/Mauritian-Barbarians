@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import useStorageLogo from "../../hooks/useStorageLogo";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import * as theme from "../../themes/theme";
+import * as theme from "../../themes/colors";
 
 const Progressbar = styled(motion.div)`
   height: 5px;
-  background: ${theme.primaryPink};
+  background: ${theme.PrimaryPink};
   margin-top: 20px;
 `;
 

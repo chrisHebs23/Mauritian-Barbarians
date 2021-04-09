@@ -5,7 +5,7 @@ import { Title } from "./gallery";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import * as theme from "../themes/theme";
+import * as theme from "../themes/colors";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Button = styled.button`
   width: 10rem;
   margin: 5%;
   border: none;
-  background-color: ${theme.primaryPink};
+  background-color: ${theme.PrimaryPink};
   color: #fff;
   text-align: center;
 `;

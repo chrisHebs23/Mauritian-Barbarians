@@ -4,7 +4,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import * as theme from "../themes/theme";
+import * as theme from "../themes/colors";
 
 const NavbarStyle = styled(Navbar)`
   /* border-bottom: 0.5px solid grey; */
@@ -47,7 +47,7 @@ const NavLinkStyle = styled(NavLink)`
   text-decoration: none;
   margin: 0 auto;
   &:hover {
-    color: ${theme.primaryPink};
+    color: ${theme.PrimaryPink};
     text-decoration: none;
   }
 `;

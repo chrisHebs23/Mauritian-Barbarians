@@ -19,13 +19,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(ROOT, "public/index.html"),
     }),
+    new FaviconsWebpackPlugin("public/logo.png"),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify("production"),
       },
     }),
     new Dotenv(),
-    new FaviconsWebpackPlugin("./public/logo.png"),
   ],
   module: {
     rules: [
@@ -45,7 +45,12 @@ module.exports = {
       },
       {
         test: /\.(svg|png|jpg|gif)$/,
-        use: "file-loader",
+        use: ["file-loader?name=[name].[ext]"],
+      },
+      {
+        test: /\.json$/,
+        exclude: /\/manifest.json$/, // ADD THIS!
+        loader: "json",
       },
     ],
   },

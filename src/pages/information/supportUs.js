@@ -1,10 +1,10 @@
 import React from "react";
 import { InfoLayout, InfoText, InfoTitle, InfoWrapper } from "./who";
 import Button from "../../themes/Button";
+import * as theme from "../../themes/colors";
 import styled from "styled-components";
 import { PiggyBank } from "@styled-icons/fa-solid/PiggyBank";
 import { Gofundme } from "@styled-icons/simple-icons/Gofundme";
-import * as theme from "../../themes/theme";
 import "aos/dist/aos.css";
 
 const Fund = styled(Gofundme)`
