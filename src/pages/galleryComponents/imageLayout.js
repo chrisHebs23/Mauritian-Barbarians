@@ -24,10 +24,6 @@ const ImageGrid = styled.ul`
   padding: 0;
 
   @media (max-width: 64rem) {
-    ul {
-      flex-direction: row;
-    }
-
     li {
       height: auto;
       width: 100%;
@@ -46,11 +42,6 @@ const ImageWrap = styled(motion.li)`
   flex-grow: 1;
   margin: 1%;
 
-  @media (max-aspect-ratio: 1/1) {
-    li {
-      height: 30vh;
-    }
-  }
   @media (max-height: 64rem) {
     li {
       height: 80vh;
@@ -62,8 +53,8 @@ const Image = styled(motion.img)`
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
+  image-resolution: auto;
   vertical-align: bottom;
-
   @media (max-width: 64rem) {
     img {
       width: 100%;
@@ -76,15 +67,13 @@ const Image = styled(motion.img)`
 
 const ImageLayout = ({ setSelectedImg }) => {
   const { docs } = useFirestore("images");
-
+  let index = 0;
   return (
     <ImageGrid>
       {docs &&
         docs.map((doc) => (
           <ImageWrap key={doc.id} onClick={() => setSelectedImg(doc.url)}>
-            <LazyLoad>
-              <Image src={doc.url} alt="gallery Images" />
-            </LazyLoad>
+            <Image src={doc.url} alt="gallery Images" />
           </ImageWrap>
         ))}
     </ImageGrid>

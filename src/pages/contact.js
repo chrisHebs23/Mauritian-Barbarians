@@ -41,18 +41,19 @@ const LayerCover = styled.div`
 `;
 
 const Form = styled.form`
-  height: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  margin: 5% auto;
 
   @media (max-width: 30rem) {
     flex-direction: column;
     flex-wrap: none;
+    margin: 0 auto;
   }
 `;
 
@@ -71,7 +72,7 @@ const Input = styled.input`
 `;
 
 const Textarea = styled.textarea`
-  width: 80%;
+  width: 75%;
   text-align: center;
   padding: 0;
   border: 1px solid rgba(191, 191, 191, 0.2);
@@ -121,7 +122,7 @@ export default function Contact() {
         <Message>
           If you are keen to help the Mauritian Barbarians, or if you are a team
           scheduled to play in the Dubai 7’s, please contact us by filling out
-          the form below:s
+          the form below:
         </Message>
         <Form className="contact-form" onSubmit={sendEmail}>
           <Input type="text" name="name" placeholder="Name" />

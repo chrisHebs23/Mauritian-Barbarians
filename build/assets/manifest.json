@@ -1,14 +1,14 @@
 {
-  "name": "Mauritian Barbarians",
-  "short_name": "Mauritian Barbarians",
-  "description": "A show case website fro the Mauritian Barbarians Rugby Team ",
+  "name": "react-webpack-boilerplate",
+  "short_name": "react-webpack-boilerplate",
+  "description": "",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "start_url": "https://mb-website-d5f6f.web.app/",
-  "background_color": "#df54ad",
-  "theme_color": "#",
+  "orientation": "any",
+  "start_url": "/?homescreen=1",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [
     {
       "src": "android-chrome-36x36.png",

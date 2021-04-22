@@ -2,11 +2,11 @@ const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
 const CompressionPlugin = require("compression-webpack-plugin");
+
 const zlib = require("zlib");
 
-// root path for this project
+const PUBLIC_PATH = "https://mb-website-d5f6f.web.app/";
 const ROOT = __dirname;
 
 module.exports = merge(common, {
@@ -14,10 +14,11 @@ module.exports = merge(common, {
   output: {
     path: path.join(ROOT, "/build"),
     filename: "[name].[contenthash].bundle.js",
+    publicPath: PUBLIC_PATH,
   },
+
   plugins: [
     new CleanWebpackPlugin(),
-
     new CompressionPlugin({
       filename: "[path][base].br",
       algorithm: "brotliCompress",

@@ -2,14 +2,22 @@ const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-// root path for this project
+
+const PUBLIC_PATH = "https://mb-website-d5f6f.web.app/";
 const ROOT = __dirname;
+const options = {
+  "main.css": "style.css",
+  "main.css.map": "style.css.map",
+  "main.js": "bundle.js",
+};
 
 module.exports = {
   entry: {
-    main: "./src/index.js",
+    main: path.resolve(ROOT, "src/index"),
   },
   optimization: {
     minimize: true,
@@ -19,6 +27,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(ROOT, "public/index.html"),
     }),
+    new WebpackManifestPlugin(options),
     new FaviconsWebpackPlugin("public/logo.png"),
     new webpack.DefinePlugin({
       "process.env": {
@@ -26,6 +35,10 @@ module.exports = {
       },
     }),
     new Dotenv(),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
   ],
   module: {
     rules: [
